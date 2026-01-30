@@ -3,11 +3,10 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace webapi.DTO
 {
-    public class CreateUser
+    public class DeleteUser
     {
-        public int Id { get; set; }
+        
         public string Name { get; set; }
-        public string Email { get; set; }
 
     }
 }

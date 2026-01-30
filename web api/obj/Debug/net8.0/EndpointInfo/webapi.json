@@ -24,17 +24,46 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UsersDTO"
+                "$ref": "#/components/schemas/CreateUser"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UsersDTO"
+                "$ref": "#/components/schemas/CreateUser"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UsersDTO"
+                "$ref": "#/components/schemas/CreateUser"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Users"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteUser"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteUser"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteUser"
               }
             }
           }
@@ -88,7 +117,7 @@
   },
   "components": {
     "schemas": {
-      "UsersDTO": {
+      "CreateUser": {
         "type": "object",
         "properties": {
           "id": {
@@ -100,6 +129,16 @@
             "nullable": true
           },
           "email": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DeleteUser": {
+        "type": "object",
+        "properties": {
+          "name": {
             "type": "string",
             "nullable": true
           }

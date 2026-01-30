@@ -35,6 +35,7 @@ namespace webapi.Controllers
             return Ok(users);
         }
 
+
         [HttpPost]
         public IActionResult CreateUser([FromBody] CreateUser CuserDto)
         {
@@ -48,6 +49,32 @@ namespace webapi.Controllers
             CuserDto.Id = user.Id;
             return CreatedAtAction(nameof(GetUsers), new { id = CuserDto.Id }, CuserDto);
         }
+
+        [HttpDelete]
+
+        public IActionResult DeleteUser([FromBody] DeleteUser DuserDto)
+        {
+
+            var user = _context.User.FirstOrDefault(u => u.Name == DuserDto.Name);
+
+            if (user == null)
+                return NotFound();
+
+            _context.User.Remove(user);
+            _context.SaveChanges();
+
+            return NoContent();
+
+        }
+
+         
+
+    
+
+
+
+
+
 
 
     }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TlYm/UWhflw=",
+  "dgSpecHash": "U5VuFWYVPR4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\loki\\source\\repos\\web api\\webapi.csproj",
+  "projectFilePath": "C:\\Users\\loki\\source\\repos\\web-api\\web api\\webapi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\loki\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\loki\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

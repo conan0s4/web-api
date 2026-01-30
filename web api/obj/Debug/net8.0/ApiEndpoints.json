@@ -18,8 +18,24 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "userDto",
-        "Type": "webapi.DTO.UsersDTO",
+        "Name": "CuserDto",
+        "Type": "webapi.DTO.CreateUser",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "webapi.Controllers.UsersController",
+    "Method": "DeleteUser",
+    "RelativePath": "api/Users",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "DuserDto",
+        "Type": "webapi.DTO.DeleteUser",
         "IsRequired": true
       }
     ],
