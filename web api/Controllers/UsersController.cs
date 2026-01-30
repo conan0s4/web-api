@@ -36,17 +36,17 @@ namespace webapi.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreateUser([FromBody] UsersDTO userDto)
+        public IActionResult CreateUser([FromBody] CreateUser CuserDto)
         {
             var user = new Users
             {
-                Name = userDto.Name,
-                Email = userDto.Email
+                Name = CuserDto.Name,
+                Email = CuserDto.Email
             };
             _context.User.Add(user);
             _context.SaveChanges();
-            userDto.Id = user.Id;
-            return CreatedAtAction(nameof(GetUsers), new { id = userDto.Id }, userDto);
+            CuserDto.Id = user.Id;
+            return CreatedAtAction(nameof(GetUsers), new { id = CuserDto.Id }, CuserDto);
         }
 
 
